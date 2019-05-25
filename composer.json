@@ -24,10 +24,16 @@
         }
     ],
     "require": {
-        "php": ">=5.3.2",
+        "php": ">=5.3.3",
         "composer-plugin-api": "^1.1"
     },
+    "require-dev": {
+        "composer/composer": "^1.2"
+    },
     "config": {
+        "platform": {
+            "php": "5.3.3"
+        },
         "sort-packages": true
     },
     "extra": {
@@ -45,8 +51,5 @@
         "email": "hello@itineris.co.uk",
         "issues": "https://github.com/ItinerisLtd/roots-wordpress-announcement/issues",
         "source": "https://github.com/ItinerisLtd/roots-wordpress-announcement"
-    },
-    "require-dev": {
-        "composer/composer": "^1.8"
     }
 }

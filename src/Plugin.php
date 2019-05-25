@@ -10,11 +10,14 @@ use Composer\Script\ScriptEvents;
 
 class Plugin implements PluginInterface, EventSubscriberInterface
 {
+    /** @var Composer */
+    protected $composer;
     /** @var IOInterface */
     protected $io;
 
     public function activate(Composer $composer, IOInterface $io)
     {
+        $this->composer = $composer;
         $this->io = $io;
     }
 
@@ -33,6 +36,15 @@ class Plugin implements PluginInterface, EventSubscriberInterface
     public function announce()
     {
         if (PHP_VERSION_ID >= 50620) {
+            return;
+        }
+
+        $installedRepo = $this->composer->getRepositoryManager()->getLocalRepository();
+        $brokenPackage = $installedRepo->findPackage(
+            'roots/wordpress',
+            '5.2 || dev-5.2-branch || 5.2.1 || dev-5.2.1-branch'
+        );
+        if (null === $brokenPackage) {
             return;
         }
 

@@ -1,0 +1,11 @@
+### Codeception ###
+/tests/_output/*
+/tests/_support/_generated/
+
+### Composer ###
+/vendor/
+/composer.lock
+
+### PhpStorm ###
+/.idea/
+

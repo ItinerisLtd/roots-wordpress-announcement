@@ -1,0 +1,52 @@
+{
+    "name": "itinerisltd/roots-wordpress-announcement",
+    "type": "composer-plugin",
+    "description": "TODO.",
+    "keywords": [
+        "todo",
+        "wordpress",
+        "wp"
+    ],
+    "homepage": "https://github.com/itinerisltd/roots-wordpress-announcement/",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Itineris Limited",
+            "email": "hello@itineris.co.uk",
+            "homepage": "https://itineris.co.uk/",
+            "role": "Company"
+        },
+        {
+            "name": "Tang Rufus",
+            "email": "tangrufus@gmail.com",
+            "homepage": "https://typist.tech/",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": ">=5.3.2",
+        "composer-plugin-api": "^1.1"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "0.1.x-dev"
+        },
+        "class": "Itineris\\RootsWordPressAnnouncement\\Plugin"
+    },
+    "autoload": {
+        "psr-4": {
+            "Itineris\\RootsWordPressAnnouncement\\": "src/"
+        }
+    },
+    "support": {
+        "email": "hello@itineris.co.uk",
+        "issues": "https://github.com/ItinerisLtd/roots-wordpress-announcement/issues",
+        "source": "https://github.com/ItinerisLtd/roots-wordpress-announcement"
+    },
+    "require-dev": {
+        "composer/composer": "^1.8"
+    }
+}

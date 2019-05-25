@@ -36,7 +36,7 @@ class Plugin implements PluginInterface, EventSubscriberInterface
             return;
         }
 
-        $message = 'You PHP version is not compatible with WordPress v5.2 or later.';
+        $message = 'Your PHP version is not compatible with WordPress v5.2 or later.';
         $message .= ' Composer version constraints failed to catch this because of a mistake in roots/wordpress.';
         $message .= ' See: https://github.com/roots/wordpress/pull/9';
 
